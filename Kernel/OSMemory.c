@@ -163,6 +163,8 @@ void OSMemInit(void)
 
 	// initialize the lowest-free pointer to the start of the heap 
 	gpOSMemLFree = (tOSMem_t *)(void *)gpOSMemBegin;
+	
+	return;
 }
 
 /***************************************************************************** 
@@ -208,6 +210,8 @@ void OSMemFree(void *pMem)
 		OSMemCombine(ptOSMemTemp);		
 	}
 	OS_EXIT_CRITICAL();
+	
+	return;
 }
 
 /***************************************************************************** 
